@@ -34,6 +34,7 @@ function play(event) {
   }
 
   plays = [...playerX, ...playerO];
+  checkWinner();
 
   switchPlayer();
 }
@@ -50,8 +51,7 @@ function startGame() {
       event.preventDefault();
 
       play(event);
-
-      checkWinner();
+      // checkWinner();
 
       if (gameSessionOver === true) resetGame();
     });
@@ -82,13 +82,15 @@ function checkWinner() {
 
     if (playerXWins) {
       // console.log("PlayerX wins.");
-
       scoreTile.textContent = `PlayerX wins.`;
+
+      // alert("PlayerX wins.");
       break;
     } else if (playerOWins) {
       // console.log("PlayerO wins.");
-
       scoreTile.textContent = `PlayerO wins.`;
+
+      // alert("PlayerO wins.");
       break;
     }
   }
@@ -101,9 +103,10 @@ function checkWinner() {
     console.log("GAME ENDED!");
   } else if (plays.length === 9) {
     // console.log("It's a draw");
-
     scoreTile.textContent = `It's a draw.`;
+
     gameSessionOver = true;
+    // alert("It's a draw");
   }
 }
 

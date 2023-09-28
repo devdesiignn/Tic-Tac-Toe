@@ -61,7 +61,7 @@ body {
 .score-board {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .score-tile {
@@ -69,7 +69,7 @@ body {
   font-size: 6rem;
   background-color: #fff;
   color: #353535;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   visibility: "hidden";
   opacity: 0;
@@ -102,4 +102,10 @@ button:hover {
 .reset-game:hover {
   color: #fff;
   background-color: red;
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 37.5%;
+  }
 }
