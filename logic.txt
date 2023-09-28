@@ -1,0 +1,17 @@
+for (const winCombinations of wins) {
+  const playerXWins = winCombinations.every((winCombination) =>
+    playerX.includes(winCombination)
+  );
+
+  const playerOWins = winCombinations.every((winCombination) =>
+    playerO.includes(winCombination)
+  );
+
+  if (playerXWins) {
+    console.log("PlayerX wins.");
+    break;
+  } else if (playerOWins) {
+    console.log("PlayerO wins.");
+    break;
+  }
+}
